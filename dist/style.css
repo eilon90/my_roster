@@ -1,0 +1,143 @@
+body {
+    background-color: #dfe6e9;
+    font-family: 'Graduate', cursive;
+}
+
+img {
+    border: 1px solid orange;
+    background-color: #b2bec3;
+    height: 42vh;
+    box-shadow: 2px 2px 6px;
+    border: 0;
+    
+}
+
+button {
+    font-family: 'Graduate', cursive;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 200;
+}
+
+.player {
+    display: grid;
+    border: 1px solid black;
+    width: 100%;
+    height: 52vh;
+    justify-items: center;
+    align-items: center;
+    background-color: #e67e22;
+    cursor: pointer;
+}
+
+.delete {
+    height: 30vh;
+    width: 30vh;
+    background-color: gray;
+    opacity: 0.75;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+}
+
+.delete-text {
+    color: red;
+    text-align: center;
+    overflow: visible;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    font-size: 40px;
+    cursor: pointer;
+
+}
+
+.error {
+    background-color: #e67e22;
+    box-shadow: none;
+}
+
+.team {
+    width: 100%;
+}
+
+#general-container {
+    width: 100%;
+}
+
+#invalid {
+    color: red;
+}
+
+#teams-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3vh;
+    margin: auto 5vh;
+}
+
+#dream-container {
+    background-color: #808e9b;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+#dream-container .player {
+    display: inline-block;
+    height: 30vh;
+    width: 30vh;
+    position: relative;
+    top: 0.5vh;
+    margin-bottom: 1vh;
+    background-color: #f39c12;
+    z-index: 1;
+}
+
+#dream-container img {
+    height: 20vh;
+    display: block;
+    margin: 0.5vh auto;
+}
+
+#dream-container h2 {
+    text-align: center;
+    margin: 0;
+}
+
+#set-team {
+    height: 4vh;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas: "i b";
+    grid-gap: 3vw;
+    margin: 3vh 2vw;
+    align-content: center;
+    width: 95%;
+}
+
+#input {
+    grid-area: i;
+    font-family: 'Graduate', cursive;
+}
+
+#getTeam {
+    grid-area: b;
+    background-color: #b2bec3;
+}
+
+#dream-team-button {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    background-color: #d35400;
+}

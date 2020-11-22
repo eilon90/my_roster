@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Roster</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = "general-container">
+        <div id = "set-team">
+            <input id = "input" type = "text" placeholder="Team's name">
+            <button id = "getTeam">Get Roster</button>
+        </div>
+        <button id = "dream-team-button">Watch Your Dream Team</button>
+        <div class = "team">
+            <h1 id = "dream-team-name"></h1>
+            <div id = "dream-container"></div>
+        </div>
+        <div class = "team">
+            <h1 id = "team-name"></h1>
+            <div id = "teams-container"></div>
+        </div>
+    </div>
+
+    <script id = "my-template" type = "text/x-handlebars-template">
+        {{#each data}}
+            <div class = "player">
+                <h2 class = "name">{{firstName}} {{lastName}}</h2>
+                <h2 class = "jersey">{{jersey}}</h2>
+                <img src = "https://nba-players.herokuapp.com/players/{{lastName}}/{{firstName}}"/>
+                <h2 class = "pos">{{pos}}</h2>
+            </div>
+        {{/each}}
+    </script>
+
+    <script id = "delete-template" type = "text/x-handlebars-template">
+        <div class = "delete">
+            <h3 class = "delete-text">{{delete}}</h3>
+        </div>
+    </script>
+    
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/handlebars/dist/handlebars.js"></script>
+    <script src = "APIManager.js"></script>
+    <script src= "Renderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
